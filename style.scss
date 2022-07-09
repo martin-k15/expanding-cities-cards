@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1vw;
+    margin: 2em;
+
+    .new-box--innsbruck,
+    .new-box--krakow,
+    .new-box--lvov {
+        height: 6em;
+        display: flex;
+        gap: 1vw;
+        flex-direction: column;
+        position: relative;
+        cursor: pointer;
+        color: whitesmoke;
+        
+        &:hover{
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+
+    .new-box--innsbruck {
+        background: url("img/innsbruck.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .new-box--krakow {
+        background: url("img/krakow.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .new-box--lvov {
+        background: url("img/lvov.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .new-box__header {
+        text-transform: uppercase;
+        text-decoration: underline;
+        align-self: center;
+        font-size: 2em;
+        padding: 1em;
+    }
+
+    .new-box__about {
+        font-size: 1em;
+        padding: 0 1em;
+        display: none;
+    }
+}
+
+
+.filter {
+    filter: grayscale(100%);
+}
